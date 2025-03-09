@@ -19,7 +19,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Set the box-sizing to border-box */
 }
 
 body {
@@ -265,9 +265,36 @@ img {
 .module-card .btn {
   margin: 0px 20px 20px; /* Add some margin */
 }
-/* ===== TESTIMONIALS ===== */
+/* ===== FEEDBACKS ===== */
+.feedbacks {
+  padding: 80px 0;
+  background-color: white; /* Set the background color as white to be differente from the previous section */
+}
 
-/* ===== CTA SECTION ===== */
+.feedbacks-slider {
+  max-width: 800px; /* Set the max width */
+  margin: 0 auto; /* Add some margin */
+}
+
+.feedback {
+  text-align: center; /* Align the text to center */
+  padding: 30px; /* Add some padding */
+  margin: 20px; /* Add some margin */
+  border-radius: 10px; /* Set the border a bit rounded */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.quote {
+  font-size: 1.2rem; /* Set the font size */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+  font-style: italic; /* Set the font style to italic */
+}
+
+.author {
+  font-size: 1rem; /* Set the font size */
+  font-weight: 800; /* Set the font weight */
+  color: var(--primary-color); /* Set the text color */
+}
 
 /* ===== FOOTER ===== */
 footer {
