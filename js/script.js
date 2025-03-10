@@ -1,8 +1,7 @@
 /**
  * GetHelp - Main JavaScript File
  * This file contains all the interactive functionality for the GetHelp website
- * Created by: Student at CCT College
- * Date: March 2025
+ * Created by: Hugo Viegas - 2024319
  */
 
 // Wait for the DOM to be fully loaded before executing any JavaScript
