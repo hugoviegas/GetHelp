@@ -25,12 +25,6 @@
             <li><a href="showcase.html">Project Showcase</a></li>
             <li><a href="about.html">About Us</a></li>
           </ul>
-          <!-- Botão de menu mobile (aparece apenas em telas pequenas) -->
-          <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </div>
       </nav>
     </header>
@@ -57,7 +51,7 @@
             <h2>Contact Form</h2>
             <form id="help-form">
               <div class="form-group">
-                <label for="name">Full Name:</label>
+                <label for="name" class="required">Full Name:</label>
                 <input
                   type="text"
                   id="name"
@@ -68,7 +62,7 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email" class="required">Email:</label>
                 <input
                   type="email"
                   id="email"
@@ -78,14 +72,14 @@
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone Number:</label>
+                <label for="phone" class="required">Phone Number:</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   placeholder="Enter your phone number"
                 />
-                <small>Must be 9 or 10 digits</small>
+                <small>Must be 9 or 10 digits (only numbers allowed)</small>
               </div>
 
               <div class="form-group">
@@ -108,7 +102,7 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Message:</label>
+                <label for="message" class="required">Message:</label>
                 <textarea
                   id="message"
                   name="message"

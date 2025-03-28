@@ -61,17 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to validate name (only letters and spaces)
   function validateName(name) {
-    // Using regex to check if name contains only letters and spaces
-    const nameRegex = /^[A-Za-z\s]+$/;
-    return nameRegex.test(name);
+    const nameRegex = /^[A-Za-z\s]+$/; // Regex will match only letters (both uppercase and lowercase) and spaces
+    return nameRegex.test(name); // Returns true if valid, false otherwise
   }
 
-  // Function to validate phone number (must be 9 or 10 digits)
+  // Function to validate phone number (must be 9 or 10 digits and contain only numbers)
   function validatePhone(phone) {
-    // Remove any non-digit characters
-    const digits = phone.replace(/\D/g, "");
-    // Check if the resulting string has exactly 9 or 10 digits
-    return digits.length === 9 || digits.length === 10;
+    const phoneRegex = /^\d{9,10}$/; // Regex will match only numbers with 9 or 10 digits
+    return phoneRegex.test(phone); // Returns true if valid, false otherwise
   }
 
   // ===== Tutorials Page Interactive Elements =====
