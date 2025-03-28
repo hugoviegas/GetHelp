@@ -6,24 +6,8 @@
 
 // Wait for the DOM to be fully loaded before executing any JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-  // ===== Mobile Menu Toggle =====
-  // This section handles the mobile menu functionality
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-  const navLinks = document.querySelector(".nav-links");
-
-  // Check if the mobile menu button exists on the page
-  if (mobileMenuBtn) {
-    // Add click event listener to toggle the mobile menu
-    mobileMenuBtn.addEventListener("click", function () {
-      // Toggle the 'active' class on the navigation links to show/hide them
-      navLinks.classList.toggle("active");
-      // Toggle the 'active' class on the button to change its appearance
-      this.classList.toggle("active");
-    });
-  }
-
   // ===== Form Validation =====
-  // This section handles the validation of the request help form
+  // This section handles the validation of the contact us form
   const helpForm = document.getElementById("help-form");
 
   // Check if the help form exists on the page
@@ -32,46 +16,45 @@ document.addEventListener("DOMContentLoaded", function () {
       // Prevent the form from submitting by default
       event.preventDefault();
 
-      // Get form field values
+      // Store each input field in a variable using getElementById
       const nameInput = document.getElementById("name");
       const emailInput = document.getElementById("email");
       const phoneInput = document.getElementById("phone");
       const messageInput = document.getElementById("message");
 
-      // Initialize a variable to track validation status
+      // Here we are initializing a variable to track if the form is valid
       let isValid = true;
 
-      // Clear previous error messages
-      clearErrors();
-
-      // Validate Name (only letters and spaces allowed)
+      // Conditional uses the function validateName to check if the name is valid.
       if (!validateName(nameInput.value)) {
-        showError(nameInput, "Name should contain only letters and spaces");
-        isValid = false;
+        alert("Name should contain only letters and spaces");
+        isValid = false; // If the name is not valid, we set isValid to false
       }
 
-      // Validate Phone (must be numeric and have 9 or 10 digits)
+      // Conditional uses the function validatePhone to check if the phone is valid, with 9 or 10 digits
       if (!validatePhone(phoneInput.value)) {
-        showError(phoneInput, "Phone number must contain 9 or 10 digits");
-        isValid = false;
+        alert("Phone number must contain 9 or 10 digits");
+        isValid = false; // If the phone number is not valid, we set isValid to false
       }
 
-      // Validate Email (simple check if not empty)
+      // Conditional uses a simple check to see if the email is empty
       if (emailInput.value.trim() === "") {
-        showError(emailInput, "Email cannot be empty");
-        isValid = false;
+        alert("Email cannot be empty");
+        isValid = false; // If the email is empty, we set isValid to false
       }
 
-      // Validate Message (simple check if not empty)
+      // Conditional uses a simple check to see if the message is empty
       if (messageInput.value.trim() === "") {
-        showError(messageInput, "Message cannot be empty");
-        isValid = false;
+        alert("Message cannot be empty");
+        isValid = false; // If the message is empty, we set isValid to false
       }
 
       // If all validations pass, show success message and reset form
       if (isValid) {
-        showSuccessMessage();
-        helpForm.reset();
+        alert(
+          "Your request has been submitted successfully! We will contact you soon."
+        );
+        helpForm.reset(); // Reset the form fields to their initial state
       }
     });
   }
@@ -89,52 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const digits = phone.replace(/\D/g, "");
     // Check if the resulting string has exactly 9 or 10 digits
     return digits.length === 9 || digits.length === 10;
-  }
-
-  // Function to display error message for a specific input
-  function showError(inputElement, message) {
-    // Create error message element
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "error-message";
-    errorDiv.textContent = message;
-
-    // Insert error message after the input element
-    inputElement.parentNode.insertBefore(errorDiv, inputElement.nextSibling);
-
-    // Add error class to the input
-    inputElement.classList.add("error-input");
-  }
-
-  // Function to clear all error messages
-  function clearErrors() {
-    // Remove all error message elements
-    const errorMessages = document.querySelectorAll(".error-message");
-    errorMessages.forEach(function (error) {
-      error.remove();
-    });
-
-    // Remove error class from all inputs
-    const inputs = document.querySelectorAll(".error-input");
-    inputs.forEach(function (input) {
-      input.classList.remove("error-input");
-    });
-  }
-
-  // Function to show success message after form submission
-  function showSuccessMessage() {
-    // Create success message container
-    const successDiv = document.createElement("div");
-    successDiv.className = "success-message";
-    successDiv.textContent =
-      "Your request has been submitted successfully! We will contact you soon.";
-
-    // Insert success message before the form
-    helpForm.parentNode.insertBefore(successDiv, helpForm);
-
-    // Remove success message after 5 seconds
-    setTimeout(function () {
-      successDiv.remove();
-    }, 5000);
   }
 
   // ===== Tutorials Page Interactive Elements =====
