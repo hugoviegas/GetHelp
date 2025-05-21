@@ -1,0 +1,10 @@
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}

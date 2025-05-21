@@ -1,0 +1,1300 @@
+/* 
+  GetHelp Main Stylesheet
+  This file contains all the styles for the GetHelp website
+*/
+
+/* ===== GENERAL STYLES ===== */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --max-width: 1200px;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Set the box-sizing to border-box */
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif; /* Set the font family */
+  line-height: 1.6; /* Set the line height */
+  color: #333; /* Set the text color for the whole body*/
+  background-color: #fff; /* Set the body background color */
+}
+
+.container {
+  max-width: var(--max-width); /* Set the max width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add some padding (space) to the container */
+}
+
+a {
+  text-decoration: none; /* Remove the underline from the links */
+  color: var(--primary-color); /* Set the color of the links */
+}
+
+img {
+  max-width: 100%; /* Set the max width of the image */
+  height: auto; /* Set the height to auto */
+}
+
+/* Add space below the fixed navbar for all pages */
+main {
+  margin-top: 80px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block; /* Display the button as inline-block */
+  padding: 10px 20px; /* Give space to the button */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Set the border a bit rounded */
+  cursor: pointer; /* Change the cursor to pointer when hover */
+  font-size: 1rem; /* Set the font size */
+  transition: all 0.3s ease; /* Add transition effect */
+  margin: 10px 0; /* Add some margin */
+}
+
+.btn.primary {
+  background-color: var(--primary-color); /* Set the background color */
+  color: white; /* Set the text color */
+}
+
+.btn.primary:hover {
+  background-color: var(
+    --primary-dark
+  ); /* Change the background color on hover */
+}
+
+.btn.secondary {
+  background-color: var(--secondary-color); /* Set the background color */
+  color: white; /* Set the text color */
+}
+
+.btn.secondary:hover {
+  background-color: var(
+    --dark-color
+  ); /* Change the background color on hover */
+}
+
+.btn.small {
+  padding: 8px 15px; /* Set smaller padding */
+  font-size: 0.9rem; /* Set smaller font size */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Set the top position to 0 */
+  width: 100%; /* Set the width to 100% to cover the page from left to right */
+  background-color: var(--primary-color); /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 15px 0; /* Add some padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  z-index: 1000; /* Set the z-index to make sure it's on top of other elements */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem; /* Set the font size */
+  font-weight: 700; /* Set the font weight */
+  color: white; /* Set the text color */
+}
+
+.nav-links {
+  display: flex; /* Display the links as flex */
+  list-style: none; /* Remove the list style */
+}
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px; /* Border set a bit rounded */
+  transition: bakcground-color 0.3s; /* Add transition effect */
+}
+
+.nav-links a:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ===== ACTIVE STATE ===== */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active li {
+  margin: 10px 0;
+}
+
+/* ===== INTRO SECTION ===== */
+.intro {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 30px 0 40px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.intro .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.intro .description {
+  font-size: 1.1rem;
+  margin: 0 auto 30px;
+  max-width: 700px;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+}
+
+.cta-buttons .btn {
+  margin: 0 10px;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center; /* Align the text to center */
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--dark-color);
+}
+
+.features-grid {
+  display: grid; /* Display the grid so each item will be separate side by side */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Set the columns */
+  gap: 30px; /* Add some gap between the columns */
+}
+
+.feature-item {
+  text-align: center; /* Align the text to center */
+  padding: 30px; /* Add some padding */
+  border-radius: 10px; /* Set the border a bit rounded */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: transform 0.3s; /* Add transition effect when using transform when it comes back from hover*/
+}
+
+.feature-item:hover {
+  transform: translateY(-10px); /* Move the item up a bit on hover */
+}
+
+.feature-icon {
+  font-size: 2.5rem; /* Set the font size */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+.feature-item h3 {
+  font-size: 1.5rem; /* Set the font size */
+  margin-bottom: 15px; /* Add some margin at the bottom */
+  color: var(--primary-color);
+}
+
+/* ===== FEEDBACKS ===== */
+.feedbacks {
+  padding: 80px 0;
+  background-color: white; /* Set the background color as white to be differente from the previous section */
+}
+
+.feedbacks-slider {
+  max-width: 800px; /* Set the max width */
+  margin: 0 auto; /* Add some margin */
+}
+
+.feedback {
+  text-align: center; /* Align the text to center */
+  padding: 30px; /* Add some padding */
+  margin: 20px; /* Add some margin */
+  border-radius: 10px; /* Set the border a bit rounded */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.quote {
+  font-size: 1.2rem; /* Set the font size */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+  font-style: italic; /* Set the font style to italic */
+}
+
+.author {
+  font-size: 1rem; /* Set the font size */
+  font-weight: 800; /* Set the font weight */
+  color: var(--primary-color); /* Set the text color */
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-grid {
+  display: grid; /* Display the grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Set the columns */
+  gap: 30px; /* Add some gap between the columns */
+  margin-bottom: 40px; /* Add some margin at the bottom */
+}
+
+.footer-col h3 {
+  font-size: 1.3rem; /* Set the font size */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none; /* Remove the list style */
+}
+
+.footer-col ul li {
+  margin-bottom: 10px; /* Add some margin at the bottom */
+}
+
+.footer-col a {
+  color: #ccc; /* Set the text color */
+  transition: color 0.3s; /* Add transition effect */
+}
+
+.footer-col a:hover {
+  color: var(--primary-color); /* Change the text color on hover */
+}
+
+.social-links {
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.social-icon {
+  margin-right: 15px; /* Add some margin at the right */
+  color: #ccc; /* Set the text color */
+}
+
+.copyright {
+  text-align: center; /* Align the text to center */
+  padding-top: 20px; /* Add some padding at the top */
+  border-top: 1px solid #555; /* Add border at the top */
+  font-size: 0.9rem; /* Set the font size a bit smaller */
+  color: #aaa; /* Set the text color a bit darker */
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  padding: 100px 0; /* Add vertical padding */
+  background-color: var(
+    --primary-color
+  ); /* Set background color to primary color */
+  color: white; /* Set text color to white */
+  text-align: center; /* Center-align the text */
+}
+
+.cta-section h2 {
+  font-size: 2.5rem; /* Set font size for the heading */
+  margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.cta-section p {
+  font-size: 1.2rem; /* Set font size for the paragraph */
+  margin-bottom: 30px; /* Add margin below the paragraph */
+  max-width: 700px; /* Set maximum width for the paragraph */
+  margin-left: auto; /* Center the paragraph horizontally */
+  margin-right: auto; /* Center the paragraph horizontally */
+}
+
+.cta-section .btn {
+  background-color: white; /* Set button background color to white */
+  color: var(--primary-color); /* Set button text color to primary color */
+}
+
+.cta-section .btn:hover {
+  background-color: #f0f0f0; /* Change button background color on hover */
+}
+
+/* Alternate section background colors */
+.light-gray {
+  background-color: #f8f9fa;
+}
+
+.white {
+  background-color: #ffffff;
+  padding: 40px 0 80px 0;
+}
+
+/* CTA section with background image */
+.blue-bg {
+  background-color: var(--primary-color);
+  background-image: url("/assets/images/projects/college-student-bg-girl.jpg");
+  background-size: cover;
+  background-position: top;
+  color: white;
+}
+
+/* ===== TUTORIALS PAGE ===== */
+/* ===== MODULES SECTION ===== */
+.modules-section {
+  padding: 80px 80px 0 80px;
+  background-color: #f4f4f4;
+}
+
+/* Set the font size and color for the module title */
+.module-container {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.module-container:hover {
+  transform: translateY(-2px);
+}
+
+.module-video {
+  flex: 0 0 40%;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.module-content {
+  flex: 0 0 60%;
+  padding: 30px;
+}
+
+.module-content h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.module-topics {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.module-topics li {
+  margin-bottom: 8px;
+}
+
+/* ===== CONTACT US PAGE ===== */
+/* ===== FORM SECTION ===== */
+.form-section {
+  padding: 80px 0;
+  background-color: #f4f4f4;
+}
+
+.required::after {
+  content: " *"; /* Add asterisk after the required fields */
+  color: red; /* Set the color to red */
+}
+
+.form-section .container {
+  display: grid; /* Display the grid */
+  grid-template-columns: 3fr 2fr; /* Set the columns */
+  gap: 40px; /* Add some gap between the columns */
+}
+
+.form-container {
+  background-color: white; /* Set the background color */
+  border-radius: 10px; /* Set the border a bit rounded */
+  padding: 30px; /* Add some padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.form-container h2 {
+  margin-bottom: 30px; /* Add some margin at the bottom */
+  color: var(--primary-color); /* Set the text color */
+  text-align: center; /* Center-align the text */
+}
+
+/* Set the font size and color for the form labels */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; /* Display the label as block */
+  margin-bottom: 8px; /* Add some margin at the bottom */
+  font-weight: 500; /* Set the font weight */
+}
+
+/* Set the font size and color for the labels */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; /* Set the width to 100% */
+  padding: 12px; /* Add some padding */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group small {
+  display: block; /* Display the small text as block */
+  margin-top: 5px;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+}
+
+/* Set the focus state for the input fields */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.help-info {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.help-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.help-info h3:first-child {
+  margin-top: 0;
+}
+
+.help-info ol,
+.help-info ul {
+  padding-left: 20px;
+}
+
+.help-info li {
+  margin-bottom: 10px;
+}
+
+/* ===== TUTORIALS PAGE STYLES ===== */
+.search-filter {
+  background: var(--light-color);
+  padding: 40px 0 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.search-filter .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 320px;
+}
+.search-box input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 240px;
+  max-width: 100%;
+  transition: border 0.2s;
+}
+.search-box input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.search-box button:hover {
+  background: var(--primary-dark);
+}
+.filters {
+  display: flex;
+  gap: 12px;
+}
+.filters select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.category-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
+.category-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+.category-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.category-card .tutorial-count {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.category-header img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.tutorials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  padding: 40px 0;
+}
+.tutorial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 28px 22px 22px 22px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tutorial-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
+.tutorial-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.tutorial-card .description {
+  color: #444;
+  margin-bottom: 12px;
+}
+.tutorial-meta {
+  font-size: 0.98rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 18px;
+}
+
+.request-tutorial {
+  background: var(--light-color);
+  padding: 60px 0 80px 0;
+  text-align: center;
+}
+.request-tutorial h2 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+.request-tutorial p {
+  color: #444;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .categories-grid,
+  .tutorials-list {
+    grid-template-columns: 1fr;
+  }
+  .search-filter .container {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 120px 0 80px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-container {
+    flex-direction: column;
+  }
+
+  .module-video,
+  .module-content {
+    flex: 0 0 100%;
+    align-items: center;
+  }
+
+  .module-video iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-section .container {
+    grid-template-columns: 1fr;
+  }
+
+  .help-info {
+    order: -1;
+  }
+}
+
+/* ===== LOGIN/REGISTER STYLES ===== */
+.alert {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-buttons {
+  margin-top: 30px;
+}
+
+.form-buttons .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.form-footer a {
+  font-weight: 500;
+}
+
+/* Captcha styles */
+.captcha-group {
+  margin-top: 30px;
+}
+
+.captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.captcha-code {
+  background-color: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #000;
+  user-select: none;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.captcha-container input {
+  flex: 1;
+  min-width: 200px;
+  font-size: 1.2rem;
+  padding: 12px;
+  letter-spacing: 4px;
+}
+
+.refresh-captcha {
+  display: inline-block;
+  margin: 10px 0;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.refresh-captcha:hover {
+  text-decoration: underline;
+}
+
+/* User menu styles */
+.user-menu {
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px !important;
+}
+
+/* Responsive styles for login/register */
+@media (max-width: 768px) {
+  .form-section {
+    padding: 120px 0 60px;
+  }
+
+  .captcha-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .captcha-code {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .captcha-container input {
+    width: 100%;
+  }
+}
+
+/* ===== 404 ERROR PAGE STYLES ===== */
+.error-section {
+  padding: 180px 0 100px;
+  background-color: var(--light-color);
+  text-align: center;
+}
+
+.error-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.error-content h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.error-content h2 {
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+
+.error-content p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .error-section {
+    padding: 150px 0 80px;
+  }
+
+  .error-content {
+    padding: 30px;
+  }
+
+  .error-content h1 {
+    font-size: 6rem;
+  }
+
+  .error-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== BURGER MENU & MOBILE MENU ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1101;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.burger-bar {
+  width: 28px;
+  height: 4px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .nav-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    align-items: center;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1101;
+    margin-right: 10px;
+    margin-top: 5px;
+    position: relative;
+  }
+}
+
+@media (min-width: 769px) {
+  .burger,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ===== MOBILE SIDEBAR MENU & OVERLAY ===== */
+.mobile-menu-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  max-width: 340px;
+  height: 100vh;
+  background: var(--primary-color); /* Set the background color */
+  color: #fff;
+  z-index: 2000;
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 32px 0 0 0;
+  overflow-y: auto;
+}
+.mobile-menu-sidebar.open {
+  display: block;
+  transform: translateX(0);
+}
+.mobile-menu-sidebar ul {
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+.mobile-menu-sidebar li {
+  margin: 0;
+}
+.mobile-menu-sidebar a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 18px 32px;
+  border-radius: 0 24px 24px 0;
+  transition: background 0.2s;
+  margin-bottom: 2px;
+}
+.mobile-menu-sidebar a:hover {
+  background: #30363d;
+}
+.mobile-menu-sidebar .user-menu {
+  font-weight: 700;
+  background: none;
+  padding-left: 32px !important;
+}
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 34, 40, 0.5);
+  z-index: 1999;
+  transition: opacity 0.3s;
+}
+.mobile-menu-overlay.open {
+  display: block;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .mobile-menu-sidebar {
+    display: block;
+  }
+  .burger {
+    display: flex;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-menu-sidebar,
+  .mobile-menu-overlay,
+  .burger {
+    display: none !important;
+  }
+}
+
+/* ===== TEAM SECTION ===== */
+.team {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.team-member {
+  background: var(--light-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  max-width: 320px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-member:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
+
+.team-member img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  border: 3px solid var(--primary-color);
+  background: #fff;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.team-member .role {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.team-member .bio {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .team {
+    padding: 50px 0;
+  }
+  .team-member {
+    padding: 24px 10px 18px 10px;
+    max-width: 100%;
+  }
+}
+
+/* ===== ADMIN TABLE (MANAGE USERS) ===== */
+.admin-table-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px 32px 32px 32px;
+  margin: 60px auto 80px auto;
+  max-width: 950px;
+}
+.admin-table-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 32px;
+  font-size: 2rem;
+  text-align: left;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0;
+  min-width: 600px;
+}
+.admin-table th,
+.admin-table td {
+  padding: 18px 16px;
+  text-align: left;
+  font-size: 1rem;
+}
+.admin-table th {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  border-bottom: 2px solid #eaf2fb;
+}
+.admin-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+.admin-table tr:nth-child(even) {
+  background: #f8fafd;
+}
+.admin-table tr:last-child {
+  border-bottom: none;
+}
+.admin-table td {
+  vertical-align: middle;
+}
+.admin-table select.input-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-right: 10px;
+  background: #f8fafd;
+  color: #333;
+}
+.admin-table button.btn.small {
+  padding: 8px 18px;
+  font-size: 0.98rem;
+  border-radius: 6px;
+  margin-left: 0;
+}
+.admin-table form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .admin-table-container {
+    padding: 18px 4px 18px 4px;
+  }
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 6px;
+    font-size: 0.95rem;
+  }
+  .admin-table button.btn.small {
+    padding: 7px 10px;
+    font-size: 0.92rem;
+  }
+}
+
+/* Responsive table for admin (manage users) */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.admin-table {
+  min-width: 600px;
+}
+@media (max-width: 600px) {
+  .admin-table {
+    min-width: 500px;
+  }
+}
+
+/* Error message styling */
+.error-box {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 8px 0;
+  border: 1px solid #ffcdd2;
+  font-size: 14px;
+}
+
+.validation-error {
+  color: #c62828;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.success-box {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 8px 0;
+  border: 1px solid #c8e6c9;
+  font-size: 14px;
+}
+
+#message-container {
+  margin-bottom: 20px;
+}
+
+/* Cookie Consent Bar */
+#cookie-consent-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #23272b;
+  color: #fff;
+  padding: 18px 12px 18px 12px;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 1rem;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+}
+#cookie-consent-bar .btn {
+  margin: 0 4px;
+}
+@media (max-width: 600px) {
+  #cookie-consent-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 0.98rem;
+    padding: 16px 6px;
+  }
+}

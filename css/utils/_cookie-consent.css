@@ -1,0 +1,29 @@
+#cookie-consent-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #23272b;
+  color: #fff;
+  padding: 18px 12px 18px 12px;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 1rem;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+}
+#cookie-consent-bar .btn {
+  margin: 0 4px;
+}
+@media (max-width: 600px) {
+  #cookie-consent-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 0.98rem;
+    padding: 16px 6px;
+  }
+}

@@ -1,0 +1,55 @@
+.error-section {
+  padding: 180px 0 100px;
+  background-color: var(--light-color);
+  text-align: center;
+}
+
+.error-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.error-content h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.error-content h2 {
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+
+.error-content p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .error-section {
+    padding: 150px 0 80px;
+  }
+  .error-content {
+    padding: 30px;
+  }
+  .error-content h1 {
+    font-size: 6rem;
+  }
+  .error-content h2 {
+    font-size: 1.5rem;
+  }
+}

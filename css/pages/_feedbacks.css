@@ -1,0 +1,29 @@
+.feedbacks {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.feedbacks-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feedback {
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}

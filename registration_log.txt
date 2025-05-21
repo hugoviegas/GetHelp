@@ -1,0 +1,18 @@
+ERROR: Database insertion failed for hugoviegas3.0@gmail.com
+ERROR: Database insertion failed for hugoviegas3.0@gmail.com
+ERROR: Database insertion failed for thalitamiranda0@gmail.com
+ERROR: Database insertion failed for hugoviegas3.0@gmail.com. MySQL error: 
+ERROR: Database insertion failed. MySQL error: ''. Debug info: Email: hugoviegas3.0@gmail.com, Name: Hugo Viegas, Phone: 8308659847
+SUCCESS: User Hugo Viegas (hugoviegas3.0@gmail.com) registered with ID 15
+SUCCESS: User Thalita Miranda Rodrigues (thalitamiranda0@gmail.com) registered with ID 16
+SUCCESS: User Hugo Viegas (hugoviegas3.0@gmail.com) registered with ID 17
+SUCCESS: User Jon Doe (agente@gmail.com) registered with ID 18
+SUCCESS: User Hugo Viegas (hugoviegas@gethelp.com) registered with ID 19
+SUCCESS: User Hugo Viegas (hugoviegas3.0@gmail.com) registered with ID 20
+SUCCESS: User Vitor Trindade (vitor.t@gethelp.com) registered with ID 21
+SUCCESS: User Thalita Miranda Rodrigues (thalitamiranda0@gmail.com) registered with ID 22
+SUCCESS: User Hugo Viegas (hugo@gethelp.com) registered with ID 23
+SUCCESS: User Hugo Viegas (hugo@gethelp.com) registered with ID 24
+SUCCESS: User Hugo Viegas (hugo@gethelp.com) registered with ID 2
+SUCCESS: User Vitor Trindade (vitor@gethelp.com) registered with ID 3
+SUCCESS: User Hugo Viegas (hugoviegas3.0@gmail.com) registered with ID 2
