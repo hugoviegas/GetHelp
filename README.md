@@ -7,30 +7,75 @@ GetHelp is a web platform developed in PHP that offers tutorials and educational
 ```
 GetHelp/
 ├── assets/
+│   ├── fonts/
 │   ├── images/
+│   │   ├── projectskills.svg
+│   │   ├── software_fund.svg
+│   │   ├── webdev.svg
+│   │   └── projects/
+│   │       ├── background-html-css.jpg
+│   │       ├── college-student-bg-girl.jpg
+│   │       └── college-student.jpg
 │   └── videos/
+│       └── HTML in 100 Seconds.mp4
+├── cookies/
+│   ├── get_cookies.php
+│   └── setcookies.php
 ├── css/
-│   └── styles.css
+│   ├── styles.bkp.css
+│   ├── styles.css
+│   ├── base/
+│   │   ├── _reset.css
+│   │   └── _variables.css
+│   ├── components/
+│   │   ├── _alerts.css
+│   │   ├── _burger.css
+│   │   ├── _buttons.css
+│   │   ├── _captcha.css
+│   │   ├── _forms.css
+│   │   └── _user-menu.css
+│   ├── layouts/
+│   │   ├── _container.css
+│   │   ├── _footer.css
+│   │   └── _navbar.css
+│   ├── pages/
+│   │   ├── _404.css
+│   │   ├── _admin.css
+│   │   ├── _cta-section.css
+│   │   ├── _features.css
+│   │   ├── _feedbacks.css
+│   │   ├── _intro.css
+│   │   ├── _modules-section.css
+│   │   ├── _team.css
+│   │   └── _tutorials.css
+│   └── utils/
+│       ├── _cookie-consent.css
+│       ├── _helpers.css
+│       └── _responsive.css
 ├── includes/
 │   ├── config.php
 │   ├── db.php
+│   ├── footer.php
 │   ├── functions.php
-│   ├── header.php
-│   └── footer.php
-├── install/
-│   └── setup_db.php
+│   └── header.php
 ├── js/
 │   └── script.js
-├── index.php
+├── sample/
+├── 404.php
 ├── about.php
+├── add_tutorial.php
+├── captcha.php
 ├── contact-us.php
+├── diagnostic.php
+├── edit_tutorial.php
+├── index.php
 ├── login.php
 ├── logout.php
+├── manage_users.php
 ├── register.php
-├── showcase.php
+├── registration_log.txt
 ├── tutorial.php
 ├── tutorials.php
-├── 404.php
 └── README.md
 ```
 
@@ -42,6 +87,8 @@ GetHelp/
 - **User System**: User login and registration with validation and security.
 - **About Us**: Information about the project and team.
 - **Contact**: Contact form with PHP validation.
+- **Cookie Management**: Added functionality to manage cookies.
+- **Admin Panel**: Manage users and tutorials.
 
 ## Technical Requirements
 
@@ -70,7 +117,7 @@ GetHelp/
 
 5. Use the default credentials to login as administrator:
    - Email: admin@gethelp.com
-   - Password: admin123
+   - Password: Admin123
 
 ## User System
 

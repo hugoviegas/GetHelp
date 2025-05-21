@@ -294,15 +294,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileOverlay = document.getElementById("mobile-menu-overlay");
 
-  // Debug: Check if all elements are found (this helps us as students to see if the IDs are correct)
-  if (!burger || !mobileMenu || !mobileOverlay) {
-    console.log("[DEBUG] Burger menu elements missing:", {
-      burger,
-      mobileMenu,
-      mobileOverlay,
-    });
-  }
-
   // Only add the event listeners if all elements exist
   if (burger && mobileMenu && mobileOverlay) {
     // This function closes the sidebar menu

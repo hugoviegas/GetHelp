@@ -24,9 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
     $captcha = sanitize_input($_POST['captcha']);
     
-    // Debug to file for troubleshooting
-    file_put_contents('captcha_debug.txt', "Entered: '$captcha', Expected: '$current_captcha'\n", FILE_APPEND);
-    
     // Validate inputs
     if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($confirm_password)) {
         $error = 'Please fill in all fields.';

@@ -49,9 +49,6 @@ for ($i = 0; $i < 100; $i++) {
 
 // Add the text
 $font = __DIR__ . '/assets/fonts/arial.ttf';
-if (!file_exists($font)) {
-    $font = __DIR__ . '/assets/fonts/DejaVuSans.ttf'; // fallback
-}
 $fontSize = 22;
 $angle = rand(-10, 10);
 $bbox = imagettfbbox($fontSize, $angle, $font, $captcha);
@@ -67,3 +64,19 @@ header('Cache-Control: no-cache, must-revalidate');
 imagepng($image);
 imagedestroy($image);
 exit;
+
+/**
+ * References for CAPTCHA Implementation 
+ *
+ * The CAPTCHA generation in this file utilizes the following PHP GD functions:
+ *
+ * The PHP Documentation Group. 2001-2025. imagecreatetruecolor. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagecreatetruecolor.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagecolorallocate. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagecolorallocate.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagefilledrectangle. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagefilledrectangle.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imageline. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imageline.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagesetpixel. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagesetpixel.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagettfbbox. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagettfbbox.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagettftext. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagettftext.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagepng. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagepng.php [Accessed 17 May 2025].
+ * The PHP Documentation Group. 2001-2025. imagedestroy. In: PHP Manual. [online]. Available at: https://www.php.net/manual/en/function.imagedestroy.php [Accessed 17 May 2025].
+ */
